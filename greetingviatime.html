@@ -1,31 +1,36 @@
 <html>
 <head>
-<title>IF-ELSE STATEMENT</title>
+   <title>TIME BASED GREETING</title>
 </head>
-<body>
-<h2>JavaScript if...else</h2>
-<p>A time based greeting</p>
+
+<body bgcolor="#80ffaa">
+<h2>Hello there!</h2>
+<p>I would like to say</p>
 <p id="demo"></p>
 
 <script>
         const time = new Date().getHours();
         let greeting;
-        if (time < 10)
+        if (time < 12)
              {
                 greeting="Good Morning";
              }
-        else if (time < 15)
+        else if (time < 16)
              {
                 greeting="Good Afternoon";
               
              }
-        else if (time < 24) 
+        else if (time < 20) 
              {
-                greeting="Good day";
+                greeting="Good Evening";
+             }
+        else 
+             {
+                greeting="Good Night";
              }
         document.getElementById("demo").innerHTML = greeting;
 
-        var a = 20;
+        var a = 24;
         if(a==10)
         {
           document.write("Variable is equal to 10")
@@ -34,13 +39,13 @@
         {
           document.write("Variable is equal to 15")
         }
-        else if(a==20)
+        else if(a==24)
         {
-          document.write("Variable is equal to 20")
+          document.write("Have a good day!!!")
         }
         else
         {
-          document.write("Variable is not equal to 10,15 or 20")
+          document.write("Variable is not equal to 10,15 or 24")
         }
 </script>
 </body>
