@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name="viewport" content="width=device-width, initial scale = 1.0">
+<title>Tool to demonstrate String</title>
+</head>
+<body>
+  <h2> String Demonstration Tool </h2>
+  <div class = "input-container">
+     <label for ="inputString">Enter a String: </label><br>
+     <input type = "text" id = "inputString"><br><br>
+  </div>
+  <button onclick = "processString()">Demonstrate String</button><br>
+  <p id="output"></p>
+</html>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+}
+
+h2 { 
+   text-align: center;
+   margin-bottom: 0.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight:bold;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 30%;
+}
+
+button {
+   background-color: #6666ff;
+   color: white;
+   padding: 1rem 2rem;
+   border: none;
+   border radius: 5px;
+   cursor: pointer;
+   margin-top: -0.4rem;
+}
+
+button:hover {
+   background-color: #3333ff;
+}
+
+#output {
+   padding: 2rem;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   font size: 1rem;
+   width: 30%;
+}
+    
+</style>  
+<script>
+function processString() {
+  //Get user-defined String Input
+  var inputString = document.getElementById("inputString").value;
+
+  //Create a string object using user-defined String
+  var str = inputString;
+
+  //Display various properties and methods of string object
+  var outputString = "Original string: " + str + "<br>";
+  outputString += "String Length: " + str.length + "<br>";
+  outputString += "Uppercase: " + str.toUpperCase() + "<br>";
+  outputString += "Lowercase: " + str.toLowerCase() + "<br>";
+  outputString += "Substring (0, 5): " + str.substring(0,6) + "<br>";
+  outputString += "Character at index 3: " + str[3] + "<br>";
+  // Character at index 
+  outputString += "Index of 'e': " + str.indexOf('e') + "<br>"; 
+  // Index of character  
+  outputString += "Last index of 'e': " + str.lastIndexOf('e') + "<br>"; 
+
+  //Concatenation with -World
+  outputString += "Concatenation with '- Hello!': " + str + ' - Hello!' + "<br>";
+
+  //Update the output content
+  document.getElementById("output").innerHTML = outputString;
+}
+</script>
+</body>
+</html>
+
+
